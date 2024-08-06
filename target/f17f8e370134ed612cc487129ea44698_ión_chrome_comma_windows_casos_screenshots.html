@@ -1,0 +1,317 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="bootstrap-icons/bootstrap-icons.css">
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.13.1/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.13.1/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.13.1/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/>
+<!--CHART.JS-->
+<script src="chartjs/chart.js"></script>
+<script src="chartjs/chartjs-plugin-datalabels@2.0.0"></script>
+<script src="chartjs/patternomaly.min.js"></script>
+<script>
+    // Register the plugin to all charts:
+    Chart.register(ChartDataLabels);
+</script>
+<!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle">Proyecto Base</span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="842e278b8697d6d70630f374499fd1bd_resources_sl_features_sl_casos.html">Agendar Una Reuni&oacute;n A Unidad De Negocio Y Asociar Contacto Previamente Creados</a></span>
+                > <span class="truncate-60"><a
+                    href="f17f8e370134ed612cc487129ea44698_ión_chrome_comma_windows_casos.html">Crear una nueva reuni&oacute;n </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="bi bi-journal-check"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="bi bi-journal-text"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="d782c44557441225cc92a5e35bf4b23b_requirement_type_feature.html"><i class="bi bi-chat-text"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 05-08-2024 16:05</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fs-2 bi bi-chat-left-quote large-icon"></i>
+                                    <span class="story-header-title">Agendar Una Reunión A Unidad De Negocio Y Asociar Contacto Previamente Creados </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="7f72b670747c4441e93d02223d14fe08_duration_1_to_10_seconds.html">1 To 10 Seconds
+                                        (Duration)
+                                </a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="b587a0a9274f8b6e3d8e0bb0ae8cb9bf_context_chrome.html">Chrome
+                                </a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="a396efb27cdfe5a722be3d67da3e0319_context_windows.html">Windows
+                                </a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="b79c4c391cb0b0b4d273e2839cb69fd0_tag_casocrearreunion.html">Caso Crear Reunion
+                                </a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="e54337ba32bd5d52b2c4a3afe4819b97_context_chrome_c__windows.html">Chrome, Windows
+                                </a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="85368f8e5f06c0cc226107c3efb5e806_tag_historiadeusuario.html">Historia De Usuario
+                                </a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">Crear una nueva reuni&oacute;n
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="a56faff33193945d488f164ce87ac4c30a95f1b39e151bcf4777c804df2ca953.png" title=" Dado que el usuario acceda a la pagina Serenity.is" width="0"/>
+                <img src="a56faff33193945d488f164ce87ac4c30a95f1b39e151bcf4777c804df2ca953.png" title=" Actor ir pagina serenity" width="0"/>
+                <img src="a56faff33193945d488f164ce87ac4c30a95f1b39e151bcf4777c804df2ca953.png" title=" actor opens the Pagina inicio sesion" width="0"/>
+                <img src="a56faff33193945d488f164ce87ac4c30a95f1b39e151bcf4777c804df2ca953.png" title=" Actor ir pagina serenity (completed)" width="0"/>
+                <img src="a56faff33193945d488f164ce87ac4c30a95f1b39e151bcf4777c804df2ca953.png" title=" Dado que el usuario acceda a la pagina Serenity.is (completed)" width="0"/>
+                <img src="617aa8166f448974fc0b8841e32bb0d3d5ec33a99871dce12b923cb298d9b619.png" title=" Y acceda con el rol admin
+| usuario | contrase&ntilde;a |
+| admin | serenity |" width="0"/>
+                <img src="617aa8166f448974fc0b8841e32bb0d3d5ec33a99871dce12b923cb298d9b619.png" title=" Actor inicio sesion" width="0"/>
+                <img src="617aa8166f448974fc0b8841e32bb0d3d5ec33a99871dce12b923cb298d9b619.png" title=" actor enters 'admin' into By.id: LoginPanel0_Username" width="0"/>
+                <img src="4f9c220b1ff43b9b39208e06a10f86aaeb81bc88f3170cb523c107db571aa209.png" title=" actor enters 'serenity' into By.id: LoginPanel0_Password" width="0"/>
+                <img src="0f4b2ed7574ecd7086410051b4f74012277f8bb128b85cee0a4d8aadd892f590.png" title=" actor clicks on [By.id: LoginPanel0_LoginButton]" width="0"/>
+                <img src="0f4b2ed7574ecd7086410051b4f74012277f8bb128b85cee0a4d8aadd892f590.png" title=" Actor inicio sesion (completed)" width="0"/>
+                <img src="0f4b2ed7574ecd7086410051b4f74012277f8bb128b85cee0a4d8aadd892f590.png" title=" Y acceda con el rol admin
+| usuario | contrase&ntilde;a |
+| admin | serenity | (completed)" width="0"/>
+                <img src="33e69c3238daa1f5660d656105edd54623ced6943dbd7c90bdcba074839af789.png" title=" Cuando el usuario despliegue el modulo Reuni&oacute;n, acceda a la funcionalidad Reuniones" width="0"/>
+                <img src="33e69c3238daa1f5660d656105edd54623ced6943dbd7c90bdcba074839af789.png" title=" Actor ir pagina reunion" width="0"/>
+                <img src="33e69c3238daa1f5660d656105edd54623ced6943dbd7c90bdcba074839af789.png" title=" actor clicks on MODULO_REUNION" width="0"/>
+                <img src="1c69f5b83377f1e634e0611e2cf3929c3502d3bc42493be6eb81534d1fd0c66c.png" title=" actor clicks on FUNCIONALIDAD_REUNIONES" width="0"/>
+                <img src="1c69f5b83377f1e634e0611e2cf3929c3502d3bc42493be6eb81534d1fd0c66c.png" title=" Actor ir pagina reunion (completed)" width="0"/>
+                <img src="1c69f5b83377f1e634e0611e2cf3929c3502d3bc42493be6eb81534d1fd0c66c.png" title=" Cuando el usuario despliegue el modulo Reuni&oacute;n, acceda a la funcionalidad Reuniones (completed)" width="0"/>
+                <img src="fa8cc4dfb07952de80d7040b1c27d861a39b50dad1a24d27891d1545a3ae7f26.png" title=" Y Selecciona la opci&oacute;n Nuevo Reuni&oacute;n e ingrese los datos requeridos
+| nombre | tipo_reuni&oacute;n | id_reuni&oacute;n | fecha_inicial | fecha_final | ubicaci&oacute;n | unidad | organizador | reportero | asistente |
+| Reunion_UdN25 | Strategy | R_0025 | 30/12/2024 08:00 | 30/12/2024 12:00 | HQ-01 | UdN_25 | Adam Stewart | Allison Bell | Lionel Messi |" width="0"/>
+                <img src="fa8cc4dfb07952de80d7040b1c27d861a39b50dad1a24d27891d1545a3ae7f26.png" title=" Actor crear nueva reunion" width="0"/>
+                <img src="fa8cc4dfb07952de80d7040b1c27d861a39b50dad1a24d27891d1545a3ae7f26.png" title=" actor clicks on BOTON_NUEVA_REUNION" width="0"/>
+                <img src="99cc6c56aa4b07a68081d19138afb1af2f9a3c92c56c00fbd2df0cc7830dc205.png" title=" actor enters 'Reunion_UdN25' into By.id: Serenity_Pro_Meeting_MeetingDialog10_MeetingName" width="0"/>
+                <img src="626ebcadea7f0053d8bc2347cb2c348c18b3d09dd4771e94cdba4bd148d79f5e.png" title=" actor clicks on [By.id: select2-chosen-6]" width="0"/>
+                <img src="39e21000dcd540ffe61284d141d3de87f9eb03df65df1d201df81c1324f82927.png" title=" actor enters 'Strategy' into By.id: s2id_autogen6_search" width="0"/>
+                <img src="8190fac943b21a40491283ee2e0bb94b219c9b448a1aa8e8df93ea71346a646c.png" title=" actor hits the 'ENTER' key#pluraliser" width="0"/>
+                <img src="7d5091750490a35b30124dc9af579c567aea3a2d09169978d4dbbdc0c4678121.png" title=" actor enters 'R_0025' into By.id: Serenity_Pro_Meeting_MeetingDialog10_MeetingNumber" width="0"/>
+                <img src="8d2805d3f6b721d4d79f8ddc3174b14f25a3b6acef9e52496e2f2465c3132fe2.png" title=" actor enters '30/12/2024 08:00' into By.id: Serenity_Pro_Meeting_MeetingDialog10_StartDate" width="0"/>
+                <img src="9efef983ce9d2acc9ee416d2a6bacd646702acb94905093fdc027aa127d6d167.png" title=" actor enters '30/12/2024 12:00' into By.id: Serenity_Pro_Meeting_MeetingDialog10_EndDate" width="0"/>
+                <img src="f7722b614129f83e6d16a784ceb9cdea579c3a03c80a178e50d1db43f46a8069.png" title=" actor clicks on [By.id: select2-chosen-7]" width="0"/>
+                <img src="418eca0ea34109faee3974a84bb1c584eed1c59852b47e65c5689082ebd01ef6.png" title=" actor enters 'HQ-01' into By.id: s2id_autogen7_search" width="0"/>
+                <img src="39f713f0adc4cf5ca414d6c893c5663931045dbaa3f57f2c9503033f71f9156b.png" title=" actor hits the 'ENTER' key#pluraliser" width="0"/>
+                <img src="3c9e21f4004e90d51d888e78a10dbec6455fa2655c4c280485223d3f4e34f2cc.png" title=" actor clicks on [By.id: select2-chosen-8]" width="0"/>
+                <img src="94edecee820dc82b4ed7bbfba29d1ba4302b76f88572752d100f10ab5e164363.png" title=" actor enters 'UdN_25' into By.id: s2id_autogen8_search" width="0"/>
+                <img src="0730c79d2f6090d9c9c0490cb41c3042774582fb0d93fa530aeb3382739e1440.png" title=" actor hits the 'ENTER' key#pluraliser" width="0"/>
+                <img src="c8693299c679c51f5d5b7ce5527c87e0835bd2480626da35535f1f775efcc4e9.png" title=" actor clicks on [By.id: select2-chosen-9]" width="0"/>
+                <img src="657bc539b16dd7288c28b6a4c0809688dce2e7595f7d4666d98000bbc7fa5b95.png" title=" actor enters 'Adam Stewart' into By.id: s2id_autogen9_search" width="0"/>
+                <img src="6e5a3e707eef656eac52e90392676ef1839c9908e67357c0566c3d5a7789a102.png" title=" actor hits the 'ENTER' key#pluraliser" width="0"/>
+                <img src="abefe9de4583048ec4fd9e1f5a8243eacc97ef8c9e8d777033a0285d04701aff.png" title=" actor clicks on [By.id: select2-chosen-10]" width="0"/>
+                <img src="cf8fdcb8142a9ec28575accd8838619cb8c9c91b8ec139a3c536dee6174a1d8e.png" title=" actor enters 'Allison Bell' into By.id: s2id_autogen10_search" width="0"/>
+                <img src="5fdbad33ec09b55ff52d2dcf11a1259dc2832324c422df8466cf8e58299b6e54.png" title=" actor hits the 'ENTER' key#pluraliser" width="0"/>
+                <img src="c8a16c73326825ff66997761bae5f426aaff4051cf964c6bafbef2b4b86c1e89.png" title=" actor clicks on [By.id: select2-chosen-12]" width="0"/>
+                <img src="341702f2b96e9b5a0e01055bce755e2a75feb9718017bd2d4c5d11469a4e0119.png" title=" actor enters 'Lionel Messi' into By.id: s2id_autogen12_search" width="0"/>
+                <img src="5dad4ccf12b933c0fc5fed162f6410c3c2ff46d45b9f3d9d4ab4475e2280f63b.png" title=" actor hits the 'ENTER' key#pluraliser" width="0"/>
+                <img src="c59001b0ce72fa0c4d218ed3981db4e6dde2e7462ffeedd4a7c46d19635e5f77.png" title=" actor clicks on BOTON_GUARDAR_REUNION" width="0"/>
+                <img src="c59001b0ce72fa0c4d218ed3981db4e6dde2e7462ffeedd4a7c46d19635e5f77.png" title=" Actor crear nueva reunion (completed)" width="0"/>
+                <img src="c59001b0ce72fa0c4d218ed3981db4e6dde2e7462ffeedd4a7c46d19635e5f77.png" title=" Y Selecciona la opci&oacute;n Nuevo Reuni&oacute;n e ingrese los datos requeridos
+| nombre | tipo_reuni&oacute;n | id_reuni&oacute;n | fecha_inicial | fecha_final | ubicaci&oacute;n | unidad | organizador | reportero | asistente |
+| Reunion_UdN25 | Strategy | R_0025 | 30/12/2024 08:00 | 30/12/2024 12:00 | HQ-01 | UdN_25 | Adam Stewart | Allison Bell | Lionel Messi | (completed)" width="0"/>
+                <img src="ed0d2c791e286b8fe95ca69334a923605417b16f7ecc5c14291f2e589f3221bd.png" title=" Entonces El sistema creara una nueva reuni&oacute;n" width="0"/>
+                <img src="ed0d2c791e286b8fe95ca69334a923605417b16f7ecc5c14291f2e589f3221bd.png" title=" Then validar nueva reunion should be a string containing 'Reunion_UdN25'" width="0"/>
+
+                <img src="ed0d2c791e286b8fe95ca69334a923605417b16f7ecc5c14291f2e589f3221bd.png" title=" Entonces El sistema creara una nueva reunión (completed): <span class='success-color'>SUCCESS</span>" width="0"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 4.0.12</span>
+</div>
+</body>
+</html>
